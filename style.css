@@ -40,6 +40,7 @@
   }
   
   .menu a {
+    font-family: "Montserrat", sans-serif;
     text-decoration: none;
     color: #333;
     font-weight: bold;
@@ -98,6 +99,7 @@
   .intro-text h1 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
+    font-family: "Darker Grotesque", sans-serif;
   }
   
   .intro-text p {
