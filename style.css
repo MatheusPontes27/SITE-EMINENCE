@@ -101,10 +101,21 @@
     margin-bottom: 1rem;
     font-family: "Darker Grotesque", sans-serif;
   }
+
+  .intro-text b  {
+    color: #E8D0A9;
+    font-size: 55px;
+  }
+
+  .intro-text span {
+    color: #E8D0A9;
+    font-size: 55px;
+  }
   
   .intro-text p {
     font-size: 1.2rem;
     margin-bottom: 2rem;
+    font-family: "Montserrat", sans-serif;
   }
   
   .intro-text .btn {
