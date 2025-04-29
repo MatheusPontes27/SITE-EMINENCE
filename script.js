@@ -6,3 +6,6 @@ const slides = document.querySelectorAll('.intro-images .slide');
       index = (index + 1) % slides.length;
       slides[index].classList.add('active');
     }, 3000);
+
+    ScrollReveal({ reset: true });
+     

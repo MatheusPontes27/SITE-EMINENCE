@@ -15,7 +15,6 @@
   /* Navbar */
   .navbar {
     background: #175751;
-    padding: 2px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     position: sticky;
     top: 0;
@@ -207,8 +206,13 @@
     position: relative;
   }
   
+  .inline-arrow {
+    width: 40px; /* ou o tamanho que você quiser */
+    vertical-align: middle;
+    margin-left: 8px; /* espaço entre o texto e a seta */
+  }  
+
   .procedures h2 {
-    text-align: column;
     font-size: 2.5rem;
     margin-bottom: 4rem;
     color: #E8D0A9;
@@ -296,8 +300,28 @@
   .procedure-points.right li {
     margin-bottom: 20px;
   }
-    
+
+  .procedure-title {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* ou 'flex-start' se quiser a imagem depois do texto e coladinha */
+    gap: 0.5rem; /* espaçamento entre o texto e a imagem */
+  }
   
+  .procedure-points.left img {
+    width: 40px; /* Ajuste o tamanho da imagem */
+    height: auto;
+  }
+
+  .procedure-points.left h4 {
+    left: 10px;
+    position: relative;
+  }
+
+  .procedures-container {
+    font-family: "Montserrat", sans-serif;
+  }
+    
   /* Serviços */
   .services {
     padding: 4rem 2rem;
