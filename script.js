@@ -37,5 +37,45 @@ const slides = document.querySelectorAll('.intro-images .slide');
       // Exibir o slide inicial
       showSlide(currentSlide);
     });
+
+    const questions = document.querySelectorAll('.faq-question');
+
+  questions.forEach(question => {
+    question.addEventListener('click', () => {
+      const answer = question.nextElementSibling;
+      const toggleIcon = question.querySelector('.faq-toggle');
+
+      // Fecha todas as outras respostas e reseta os ícones
+      document.querySelectorAll('.faq-answer').forEach(a => {
+        if (a !== answer) a.style.display = 'none';
+      });
+      document.querySelectorAll('.faq-toggle').forEach(icon => {
+        if (icon !== toggleIcon) icon.textContent = '▶';
+      });
+
+      // Alternar visibilidade da resposta clicada e ícone
+      if (answer.style.display === 'block') {
+        answer.style.display = 'none';
+        toggleIcon.textContent = '▶';
+      } else {
+        answer.style.display = 'block';
+        toggleIcon.textContent = '▲';
+      }
+    });
+  });
+
+  emailjs.init("EgG2ZUtkVeMClV63C"); // substitua pela sua chave pública
+
+  document.getElementById("contact-form").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    emailjs.sendForm("service_zylsu65", "template_pazvv9q", this)
+      .then(function(response) {
+        alert("Mensagem enviada com sucesso!");
+      }, function(error) {
+        alert("Erro ao enviar. Tente novamente.");
+        console.log(error);
+      });
+  });
     
      
