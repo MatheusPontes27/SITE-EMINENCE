@@ -95,29 +95,78 @@
     <div class="service-cards">
       <div class="card">
         <div class="card-image">
-          <img src="./IMG/yurilins.jpg" alt="Dr. Yuri Lins">
-          <img class="background-shape" src="./IMG/fundo-organico.png" alt="Fundo orgânico">
+          <img src="./IMG/yurilins.jpg">
         </div>
-        <h3>Dr. Yuri Lins dos Santos</h3>
+        <h3>Dr. Yuri Lins</h3>
         <p>Recupere seu sorriso com segurança e tecnologia.</p>
       </div>
   
       <div class="card">
         <div class="card-image">
-          <img src="./IMG/viviane1.jpg" alt="Dr. Viviane">
-          <img class="background-shape" src="./IMG/fundo-organico.png" alt="Fundo orgânico">
+          <img src="./IMG/viviane1.jpg">
         </div>
-        <h3>Ortodontia</h3>
-        <p>Alinhe seus dentes com conforto e eficiência.</p>
+        <h3>Dra. Viviane Costa</h3>
+        <ul>
+         <li>Graduada em Tecnologia em Radiologia pela UNINASSAU</li>
+         <li>Graduada em Odontologia pela UEPB</li>
+         <li>Mestra em Odontologia pela UEPB</li>
+         <li>Especialista em Ortodontia</li>
+        </ul>
       </div>
     </div>
   </section>  
 
   <!-- Sobre nós -->
-  <section class="about" id="diferenciais">
-    <div class="about-content">
-      <h2>Clinica Eminence</h2>
-      <p>Mais de 10 anos proporcionando qualidade de vida através da odontologia.</p>
+  <section class="about-us" id="sobre">
+    <div class="about-container">
+      <!-- Conteúdo à Esquerda: Texto + Marcadores -->
+      <div class="about-left">
+        <h2>Sobre Nós</h2>
+        <p>Na Clínica Eminence, cuidamos da sua saúde bucal com excelência, carinho e tecnologia de ponta.</p>
+        
+        <ul class="about-highlights">
+          <li>
+            <img src="./IMG/icon-qualidade.png" alt="Ícone Qualidade">
+            Atendimento personalizado e humanizado
+          </li>
+          <li>
+            <img src="./IMG/icon-tecnologia.png" alt="Ícone Tecnologia">
+            Equipamentos modernos e seguros
+          </li>
+          <li>
+            <img src="./IMG/icon-equipe.png" alt="Ícone Equipe">
+            Profissionais experientes e atualizados
+          </li>
+        </ul>
+      </div>
+  
+      <!-- Carrossel à Direita: Imagens/Vídeos -->
+      <div class="about-right">
+        <div class="carousel-container">
+          <div class="carousel-slide active">
+            <img src="./IMG/atendimentoyuri.jpg" alt="Imagem da Clínica">
+          </div>
+          <div class="carousel-slide">
+            <img src="./IMG/atendimentoyuri1.jpg" class="carousel-media" alt="Imagem vertical">
+          </div>
+          
+          <div class="carousel-slide">
+            <video src="./IMG/depoimento.mp4" controls></video>
+          </div>
+  
+          <!-- Setas SVG -->
+          <button class="carousel-prev">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+              <path d="M15 18l-6-6 6-6" stroke="black" stroke-width="2" fill="none"/>
+            </svg>            
+          </button>
+          <button class="carousel-next">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+              <path d="M9 18l6-6-6-6" stroke="black" stroke-width="2" fill="none"/>
+            </svg>            
+          </button>
+        </div>
+      </div>
     </div>
   </section>
 
