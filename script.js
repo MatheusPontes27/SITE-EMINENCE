@@ -64,18 +64,20 @@ const slides = document.querySelectorAll('.intro-images .slide');
     });
   });
 
-  emailjs.init("EgG2ZUtkVeMClV63C"); // substitua pela sua chave pública
+  document.addEventListener("DOMContentLoaded", function () {
+    emailjs.init("EgG2ZUtkVeMClV63C"); // Sua chave pública
 
-  document.getElementById("contact-form").addEventListener("submit", function(event) {
-    event.preventDefault();
+    document.getElementById("contact-form").addEventListener("submit", function (event) {
+      event.preventDefault(); // Impede o envio padrão
 
-    emailjs.sendForm("service_zylsu65", "template_pazvv9q", this)
-      .then(function(response) {
-        alert("Mensagem enviada com sucesso!");
-      }, function(error) {
-        alert("Erro ao enviar. Tente novamente.");
-        console.log(error);
-      });
+      emailjs.sendForm("service_zylsu65", "template_pazvv9q", this)
+        .then(function (response) {
+          alert("Mensagem enviada com sucesso!");
+        }, function (error) {
+          alert("Erro ao enviar. Tente novamente.");
+          console.log(error);
+        });
+    });
   });
     
      
