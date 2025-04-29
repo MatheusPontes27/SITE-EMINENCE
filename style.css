@@ -329,16 +329,28 @@
     
   /* Serviços */
   .services {
-    padding: 5rem 2rem;
-    background-color: #f9f9f9;
+    padding: 3rem 1rem;
+    background-color: #E8D0A9;
     text-align: center;
+  }
+
+  .services h2 {
+    color: #fff;
+    padding: 1rem 1rem;
+    font-size: 30px;
+    font-family: "Montserrat", sans-serif;
+  }
+
+  .services b {
+    color: #00796B;
   }
   
   .service-cards {
     display: flex;
     justify-content: center;
-    gap: 2rem;
+    gap: 10rem;
     flex-wrap: wrap;
+    padding: 2rem;
   }
   
   .card {
