@@ -233,7 +233,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 4rem; /* adicionar espaço nas laterais */
+    padding: 28rem 1rem; /* adicionar espaço nas laterais */
   }
   
   .central-image {
@@ -313,6 +313,11 @@
     height: auto;
   }
 
+  .procedure-points.right img {
+    width: 40px; /* Ajuste o tamanho da imagem */
+    height: auto;
+  }
+
   .procedure-points.left h4 {
     left: 10px;
     position: relative;
@@ -324,26 +329,55 @@
     
   /* Serviços */
   .services {
-    padding: 4rem 2rem;
+    padding: 5rem 2rem;
+    background-color: #f9f9f9;
     text-align: center;
   }
   
   .service-cards {
     display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
     justify-content: center;
-    margin-top: 2rem;
+    gap: 2rem;
+    flex-wrap: wrap;
   }
   
   .card {
-    background: #f7f7f7;
-    padding: 2rem;
-    border-radius: 10px;
-    flex: 1 1 250px;
-    max-width: 300px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    background: white;
+    border-radius: 16px;
+    padding: 2rem 1.5rem;
+    width: 280px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    position: relative;
+    overflow: hidden;
   }
+  
+  .card-image {
+    position: relative;
+    width: 100%;
+    height: 150px;
+    margin-bottom: 1rem;
+  }
+  
+  .card-image img:first-child {
+    position: relative;
+    z-index: 2;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 0 auto;
+    display: block;
+  }
+  
+  .card-image .background-shape {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    z-index: 1;
+    opacity: 0.4;
+  }  
   
   /* Sobre */
   .about {
