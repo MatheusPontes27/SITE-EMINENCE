@@ -240,7 +240,7 @@
     <div class="contact-container">
       <!-- Lado Esquerdo: Formulário -->
       <div class="contact-left">
-        <h2>Entre em Contato</h2>
+        <h2>Entre em <span>Contato</span></h2>
         <form action="enviar.php" method="POST">
           <input type="text" name="nome" placeholder="Seu nome" required>
           <input type="email" name="email" placeholder="Seu e-mail" required>
@@ -250,56 +250,63 @@
       </div>
   
       <!-- Lado Direito: Informações de Contato -->
-      <div class="contact-right">
-        <div class="contact-card">
-          <ul class="contact-info">
-            <li>
+      <div class="contact-card" style="max-width: 420px; padding: 25px;">
+        <ul class="contact-info">
+          <li>
+            <a href="https://www.instagram.com/clinicaeminence" target="_blank">
               <img src="./IMG/instagram.png" alt="Instagram">
               <div>
                 <strong>Instagram</strong>
                 <p>@clinicaeminence</p>
               </div>
-            </li>
-            <li>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/clinicaeminence" target="_blank">
               <img src="./IMG/facebook.png" alt="Facebook">
               <div>
                 <strong>Facebook</strong>
                 <p>/clinicaeminence</p>
               </div>
-            </li>
-            <li>
+            </a>
+          </li>
+          <li>
+            <a href="https://wa.me/5583998220272" target="_blank">
               <img src="./IMG/whatsapp.png" alt="WhatsApp">
               <div>
                 <strong>WhatsApp</strong>
-                <p><a href="https://wa.me/+5583998220272" target="_blank">+55 83 99822-0272</a></p>
+                <p>+55 83 99822-0272</p>
               </div>
-            </li>
-            <li>
+            </a>
+          </li>
+          <li>
+            <a href="https://maps.app.goo.gl/dgAr741fNEpZhBDz5" target="_blank">
               <img src="./IMG/mapas-e-bandeiras.png" alt="Endereço">
               <div>
                 <strong>Endereço</strong>
-                <p>Rua Exemplo, 123 - São Paulo/SP</p>
+                <p>R. Montevidéu, 720 - Bela Vista, Campina Grande - PB</p>
               </div>
-            </li>
-            <li>
+            </a>
+          </li>
+          <li>
+            <a href="tel:+5583998220272">
               <img src="./IMG/telefone.png" alt="Telefone">
               <div>
                 <strong>Telefone</strong>
-                <p>(11) 3456-7890</p>
+                <p>(83) 99822-0272</p>
               </div>
-            </li>
-          </ul>
-        </div>
+            </a>
+          </li>
+        </ul>
       </div>
   </section>
   
 
   <!-- Rodapé -->
   <footer class="footer">
-    <p>© 2025 Eminence. Todos os direitos reservados Matheus Pontes.</p>
+    <p>© 2025 Clinica Eminence. Todos os direitos reservados Matheus Pontes.</p>
   </footer>
 
   <script src="./script.js"></script>
-  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 </body>
 </html>

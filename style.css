@@ -598,15 +598,17 @@ button:hover svg {
   /* Contato */
   .contact-section {
     background-color: #fff;
-    padding: 4rem 8vw;
+    padding: 4rem 12vw;
   }
   
   .contact-container {
     display: flex;
     justify-content: space-between;
-    gap: 3rem;
+    gap: 200px;
     flex-wrap: wrap;
+    margin-left: -60px;
   }
+  
   
   .contact-left,
   .contact-right {
@@ -617,6 +619,15 @@ button:hover svg {
   .contact-left h2 {
     font-size: 2rem;
     margin-bottom: 1.5rem;
+    color: #00796B;
+    font-family: "Montserrat", sans-serif;
+  }
+
+  .contact-left span {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #E8D0A9;
+    font-family: "Montserrat", sans-serif;
   }
   
   form input,
@@ -644,59 +655,58 @@ button:hover svg {
   }
   
   .contact-card {
-    background-color: #ffffff;
+    background-color: #fff;
     border-radius: 15px;
     padding: 30px;
-    box-shadow: 0 0 25px 5px rgba(232, 208, 169, 0.85); /* sombra forte e espalhada em todos os lados */
-    max-width: 400px;
-    margin: 0 auto;
+    width: 100%;
+    max-width: 500px; /* Tamanho anterior */
+    box-shadow: 0 0 20px 4px #E8D0A9; /* Sombra forte nos 4 lados */
   }
   
   .contact-info {
-    list-style: none;
     padding: 0;
     margin: 0;
   }
   
   .contact-info li {
-    display: flex;
-    align-items: flex-start;
-    gap: 15px;
+    list-style: none;
     margin-bottom: 20px;
   }
   
-  .contact-info li img {
-    width: 30px;
-    height: 30px;
-    flex-shrink: 0;
-    margin-top: 5px;
-  }
-  
-  .contact-info li strong {
-    font-size: 16px;
-    color: #333;
-    display: block;
-    margin-bottom: 4px;
-  }
-  
-  .contact-info li p {
-    margin: 0;
-    font-size: 14px;
-    color: #666;
-  }
-  
   .contact-info a {
-    color: #007bff;
+    display: flex;
+    align-items: center;
+    gap: 15px;
     text-decoration: none;
+    color: #000;
+    padding: 10px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+    font-family: "Montserrat", sans-serif;
   }
   
   .contact-info a:hover {
-    text-decoration: underline;
+    background-color: #f7f1e6;
   }
+  
+  .contact-info img {
+    width: 32px;
+    height: 32px;
+  }
+  
+  .contact-info strong {
+    font-size: 16px;
+  }
+  
+  .contact-info p {
+    margin: 0;
+    font-size: 14px;
+    font-family: "Montserrat", sans-serif;
+  }  
   
   /* Rodapé */
   .footer {
-    background: #333;
+    background: #175751;
     color: #fff;
     text-align: center;
     padding: 2rem 0;
