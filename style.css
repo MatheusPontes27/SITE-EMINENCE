@@ -614,8 +614,7 @@ button:hover svg {
     min-width: 300px;
   }
   
-  .contact-left h2,
-  .contact-right h2 {
+  .contact-left h2 {
     font-size: 2rem;
     margin-bottom: 1.5rem;
   }
@@ -644,22 +643,55 @@ button:hover svg {
     background-color: #b48849;
   }
   
+  .contact-card {
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 0 25px 5px rgba(232, 208, 169, 0.85); /* sombra forte e espalhada em todos os lados */
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
   .contact-info {
     list-style: none;
     padding: 0;
+    margin: 0;
   }
   
   .contact-info li {
     display: flex;
-    align-items: center;
-    margin-bottom: 1.2rem;
-    font-size: 1.1rem;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 20px;
   }
   
-  .contact-info img {
-    width: 24px;
-    height: 24px;
-    margin-right: 10px;
+  .contact-info li img {
+    width: 30px;
+    height: 30px;
+    flex-shrink: 0;
+    margin-top: 5px;
+  }
+  
+  .contact-info li strong {
+    font-size: 16px;
+    color: #333;
+    display: block;
+    margin-bottom: 4px;
+  }
+  
+  .contact-info li p {
+    margin: 0;
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .contact-info a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .contact-info a:hover {
+    text-decoration: underline;
   }
   
   /* Rodapé */
