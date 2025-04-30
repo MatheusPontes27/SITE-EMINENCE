@@ -530,37 +530,43 @@ button:hover svg {
 
   /* FAQ */
   .faq {
-    max-width: 800px;
+    max-width: 1500px;
     margin: 4rem auto;
     padding: 1rem;
-    background: #fff;
-    border-radius: 8px;
+    background: #E8D0A9;
   }
   
   .faq h2 {
     font-size: 2rem;
     margin-bottom: 1.5rem;
     text-align: center;
+    color: #fff;
+  }
+
+  .faq b {
+    color: #00796B;
   }
   
   .faq-item {
     margin-bottom: 1rem;
     border-bottom: 1px solid #ddd;
+    color: #E8D0A9;
   }
   
   .faq-question {
     cursor: pointer;
     font-weight:bolder;
-    padding: 0.5rem ;
+    padding: 0.3rem ;
     display: flex;
     gap: 0.5rem;
     transition: background 0.3s;
     font-family: "Montserrat", sans-serif;
-    margin-left: -200px;
+    color: #00796B;
+    margin-left: 20px;
   }
   
   .faq-question:hover {
-    background-color: #f2e8d9;
+    background-color: #e5bd7c;
   }
   
   .faq-toggle {
@@ -573,14 +579,14 @@ button:hover svg {
     display: none;
     padding: 0.75rem 1.5rem;
     font-size: 1rem;
-    color: #555;
+    color: #00796B;
     font-family: "Montserrat", sans-serif;
-    margin-left: -200px;
+    margin-left: 20px;
   }    
   
   /* Contato */
   .contact-section {
-    background-color: #f9f4ee;
+    background-color: #fff;
     padding: 4rem 8vw;
   }
   
