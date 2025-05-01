@@ -75,7 +75,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden
+    overflow: hidden;
   }
   
   .intro-container {
@@ -772,3 +772,204 @@ button:hover svg {
       display: none;
     }
   }
+
+  @media (max-width: 768px) {
+    .intro-container {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 0 20px;
+    }
+  
+    .intro-text h1 {
+      font-size: 2rem;
+    }
+  
+    .intro-text p {
+      font-size: 1rem;
+      margin: 16px 0;
+    }
+  
+    .intro-text .btn {
+      padding: 10px 20px;
+      font-size: 1rem;
+    }
+  
+    .intro-images {
+      width: 85%;
+      height: 10%;
+      height: 600px; /* Aumentado de 300px para 450px */
+      position: relative;
+      overflow: hidden;
+      border-radius: 10px;
+    }
+  
+    .intro-images img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* Já garante que a imagem preencha o espaço */
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out;
+    }
+  
+    .intro-images img.active {
+      opacity: 1;
+    }
+  
+    .image-overlay {
+      border-radius: 10px;
+    }
+  }
+
+  /* Para garantir que a seção Procedures tenha o espaçamento correto */
+@media (max-width: 768px) {
+  .procedures {
+    padding: 20px;
+    margin-top: 10px;
+  }
+
+  .procedures h2 {
+    margin-bottom: 10px; /* Diminui o espaço entre o h2 e o primeiro card */
+  }
+
+  .procedures-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px; /* Adiciona um pouco de padding na seção para evitar o contato com outras áreas */
+  }
+
+  .procedure-points {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .procedure-points li {
+    margin-bottom: 15px;
+    text-align: center;
+  }
+
+  .procedure-points h4 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+
+  .procedure-points p {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .central-image img {
+    width: 90%;
+    height: auto;
+  }
+}
+
+@media (max-width: 768px){
+  /* Ajuste para os cards da seção Services */
+  .services {
+    padding: 20px;
+    margin-top: 40px; /* Garantindo que as seções não fiquem muito próximas */
+  }
+
+  .service-cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* Ajuste no espaçamento entre os cards */
+  }
+
+  .card {
+    width: 100%;
+    max-width: 350px; /* Largura dos cards ajustada */
+    text-align: center;
+    margin: 0 auto; /* Garantindo que os cards fiquem centralizados */
+  }
+
+  .card-image img {
+    width: 100%;
+    height: auto;
+  }
+
+  .card h3 {
+    font-size: 1.2rem;
+    margin-top: 10px;
+  }
+
+  .card ul {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  .card ul li {
+    font-size: 1rem;
+    margin: 5px 0;
+  }
+}  
+  
+  
+  @media (max-width: 768px) {
+    /* Ajuste da seção "About Us" */
+    .about-us {
+      padding: 20px;
+      margin-top: 50px; /* Espaçamento de separação com a seção anterior */
+      text-align: center;
+    }
+  
+    .about-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    /* Ajuste na parte do texto */
+    .about-left {
+      margin-bottom: 30px;
+      width: 100%;
+    }
+  
+    .about-left p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+  
+    .about-highlights {
+      list-style: none;
+      padding-left: 0;
+      margin-top: 20px;
+    }
+  
+    .about-highlights li {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      margin-bottom: 15px;
+    }
+  
+    .about-highlights img {
+      width: 24px;
+      margin-right: 10px;
+    }
+  
+    /* Ajuste do título */
+    .about-left h2 {
+      font-size: 1.8rem;
+      margin: 20px 0;
+    }
+  
+    /* Ajuste do ícone de "POR QUE" */
+    .porque {
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+  }
+  
+  
+  
