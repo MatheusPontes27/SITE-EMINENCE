@@ -728,7 +728,7 @@ button:hover svg {
   }
   
   .menu-toggle span {
-    height: 3px;
+    height: 5px;
     width: 100%;
     background: #333;
     border-radius: 2px;
