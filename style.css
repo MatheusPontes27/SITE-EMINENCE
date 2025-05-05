@@ -863,26 +863,28 @@ button:hover svg {
     font-size: 1rem;
     text-align: center;
   }
+}
 
-  .central-image img {
-    width: 90%;
-    height: auto;
+@media (max-width: 768px) {
+  .procedures .central-image img {
+    width: 100%;     /* Preenche a largura disponível */
+    max-width: 300px; /* Limita a largura máxima */
+    height: 350px;    /* Mantém a proporção */
+    display: block;
+    margin: -80px auto; /* Centraliza com espaçamento */
+    margin-bottom: 50px;
+    margin-top: auto;
+  }
+
+  .procedures .central-image {
+    text-align: center; /* Garante centralização */
+    margin: 20px 0;
   }
 }
 
+
 @media (max-width: 768px){
   /* Ajuste para os cards da seção Services */
-  .services {
-    padding: 20px;
-    margin-top: 40px; /* Garantindo que as seções não fiquem muito próximas */
-  }
-
-  .service-cards {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px; /* Ajuste no espaçamento entre os cards */
-  }
 
   .card {
     width: 100%;
@@ -910,66 +912,104 @@ button:hover svg {
     font-size: 1rem;
     margin: 5px 0;
   }
-}  
-  
-  
-  @media (max-width: 768px) {
-    /* Ajuste da seção "About Us" */
-    .about-us {
-      padding: 20px;
-      margin-top: 50px; /* Espaçamento de separação com a seção anterior */
-      text-align: center;
-    }
-  
-    .about-container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    /* Ajuste na parte do texto */
-    .about-left {
-      margin-bottom: 30px;
-      width: 100%;
-    }
-  
-    .about-left p {
-      font-size: 1.1rem;
-      line-height: 1.6;
-    }
-  
-    .about-highlights {
-      list-style: none;
-      padding-left: 0;
-      margin-top: 20px;
-    }
-  
-    .about-highlights li {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1rem;
-      margin-bottom: 15px;
-    }
-  
-    .about-highlights img {
-      width: 24px;
-      margin-right: 10px;
-    }
-  
-    /* Ajuste do título */
-    .about-left h2 {
-      font-size: 1.8rem;
-      margin: 20px 0;
-    }
-  
-    /* Ajuste do ícone de "POR QUE" */
-    .porque {
-      font-size: 1.3rem;
-      margin-bottom: 10px;
-      font-weight: bold;
-    }
+}
+
+@media (max-width: 768px) {
+  .procedures {
+    margin-bottom: 1400px; /* Espaço depois da seção procedures */
   }
+
+  .services {
+    margin-top: 40px; /* Espaço antes da seção services */
+    padding: 0 20px;
+  }
+
+  .service-cards {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .service-cards .card {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding: 20px;
+  }
+
+  .about-left {
+    width: 100%;
+    text-align: center;
+  }
+
+  .about-left h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+
+  .about-left p,
+  .about-left .porque {
+    font-size: 16px;
+  }
+
+  .about-highlights {
+    padding: 0;
+    list-style: none;
+  }
+
+  .about-highlights li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 10px 0;
+  }
+
+  .about-highlights img {
+    width: 24px;
+    height: 24px;
+  }
+
+  .about-right {
+    width: 100%;
+  }
+
+  .carousel-container {
+    position: relative;
+    width: calc(100% + 80px); /* largura extra para abrigar setas */
+    margin-left: -40px; /* centraliza a imagem e as setas */
+    overflow: visible; /* permite que as setas apareçam fora */
+  }
+
+  .carousel-slide video,
+  .carousel-slide img {
+    width: 100%;
+    border-radius: 10px;
+  }
+
+  .carousel-slide video,
+  .carousel-slide img {
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto;
+  }
+
+  button.carousel-prev {
+    left: -50px;
+  }
+
+  button.carousel-next {
+    right: -50px;
+  }
+}
+
+
   
   
   
