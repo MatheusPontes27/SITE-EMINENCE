@@ -88,5 +88,71 @@ const slides = document.querySelectorAll('.intro-images .slide');
     menu.classList.toggle('show');
   });
 
+  function abrirAgendamento() {
+  document.getElementById("agendamentoModal").style.display = "flex";
+}
+
+function fecharAgendamento() {
+  document.getElementById("agendamentoModal").style.display = "none";
+}
+
+const horariosTotais = [
+  "08:00", "09:00", "10:00", "11:00", "12:00", "13:00", "14:00", "15:00", "16:00", "17:00", "18:00"
+];
+
+// Simula horarios ocupados (ideal: buscar do backend ou banco de dados)
+const horariosOcupados = {
+  "2025-05-20": ["09:00", "14:00"],
+  "2025-05-21": ["08:00", "12:00"]
+};
+
+function carregarHorariosDisponiveis() {
+  const data = document.getElementById("data").value;
+  const selectHorario = document.getElementById("horario");
+  selectHorario.innerHTML = "";
+
+  if (!data) return;
+
+  const ocupados = horariosOcupados[data] || [];
+
+  horariosTotais.forEach(horario => {
+    const option = document.createElement("option");
+    option.value = horario;
+    option.textContent = ocupados.includes(horario) ? `${horario} - Horário já reservado` : horario;
+    option.disabled = ocupados.includes(horario);
+    selectHorario.appendChild(option);
+  });
+}
+
+function enviarParaWhatsApp() {
+  const data = document.getElementById('data').value;
+  const horario = document.getElementById('horario').value;
+  const dentista = document.getElementById('dentista').value;
+
+  if (!data || !horario || !dentista) {
+    alert("Preencha todos os campos!");
+    return;
+  }
+
+  // Formata a data para o formato brasileiro
+  const dataFormatada = new Date(data + 'T00:00:00').toLocaleDateString('pt-BR');
+
+  // Cria a mensagem
+  const mensagem = `Olá! Gostaria de agendar uma consulta:\n\n📅 *Data:* ${dataFormatada}\n🕒 *Horário:* ${horario}\n🦷 *Dentista:* ${dentista}`;
+
+  // Codifica a mensagem para a URL
+  const mensagemCodificada = encodeURIComponent(mensagem);
+
+  // Link com número da clínica
+  const numero = '5583998220272';
+  const link = `https://api.whatsapp.com/send?phone=${numero}&text=${mensagemCodificada}`;
+  window.open(link, '_blank');
+
+  // Abre o WhatsApp em nova aba com a mensagem
+  window.open(link, '_blank');
+}
+
+
+
     
      
