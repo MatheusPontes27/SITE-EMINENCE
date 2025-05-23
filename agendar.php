@@ -1,47 +1,37 @@
 <?php
-// Conexão com o banco de dados
-$servername = "localhost";
-$username = "root"; // ou seu usuário do MySQL
-$password = ""; // sua senha
-$dbname = "clinica_agendamentos";
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+  $nomePaciente = $_POST['nome'];
+  $data = $_POST['data'];
+  $horario = $_POST['horario'];
+  $dentista = $_POST['dentista'];
 
-$conn = new mysqli($servername, $username, $password, $dbname);
+  // Define os e-mails dos dentistas
+  $emailsDentistas = [
+    "yuri" => "yuri@clinica.com",
+    "viviane" => "matheuspontes@cearabytes.com.br"
+  ];
 
-// Verifica a conexão
-if ($conn->connect_error) {
-    die("Falha na conexão: " . $conn->connect_error);
+  // Nome completo para o corpo do e-mail
+  $nomesDentistas = [
+    "yuri" => "Dr. Yuri",
+    "viviane" => "Dra. Viviane"
+  ];
+
+  if (!isset($emailsDentistas[$dentista])) {
+    die("Dentista não encontrado.");
+  }
+
+  $to = $emailsDentistas[$dentista];
+  $nomeDentista = $nomesDentistas[$dentista];
+
+  $subject = "Novo Agendamento para $nomeDentista";
+  $message = "Olá $nomeDentista,\n\nVocê recebeu um novo agendamento de consulta:\n\n👤 Nome do Paciente: $nomePaciente\n📅 Data: $data\n🕒 Horário: $horario\n👨‍⚕️ Dentista: $nomeDentista";
+  $headers = "From: sistema@clinica.com";
+
+  if (mail($to, $subject, $message, $headers)) {
+    echo "<script>alert('Consulta agendada com sucesso!'); window.location.href='index.html';</script>";
+  } else {
+    echo "<script>alert('Erro ao enviar agendamento.'); window.history.back();</script>";
+  }
 }
-
-include 'conexao.php';
-
-// Recebendo dados do formulário
-$data = $_POST['data'];
-$horario = $_POST['horario'];
-$dentista = $_POST['dentista'];
-
-// Verifica se o horário já está reservado
-$sql_verifica = "SELECT * FROM agendamentos WHERE data = ? AND horario = ? AND dentista = ?";
-$stmt = $conn->prepare($sql_verifica);
-$stmt->bind_param("sss", $data, $horario, $dentista);
-$stmt->execute();
-$result = $stmt->get_result();
-
-if ($result->num_rows > 0) {
-    echo "Horário já reservado.";
-} else {
-    // Inserir no banco de dados
-    $sql = "INSERT INTO agendamentos (data, horario, dentista) VALUES (?, ?, ?)";
-    $stmt = $conn->prepare($sql);
-    $stmt->bind_param("sss", $data, $horario, $dentista);
-
-    if ($stmt->execute()) {
-        echo "Agendamento realizado com sucesso.";
-    } else {
-        echo "Erro ao agendar: " . $stmt->error;
-    }
-}
-
-$conn->close();
 ?>
-
-
