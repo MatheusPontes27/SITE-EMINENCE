@@ -225,38 +225,38 @@
   animation: aparecer 0.3s ease-in-out;
 }
 
-#whatsappModal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0,0,0,0.6);
+.popup-overlay {
   display: none;
-  align-items: center;
-  justify-content: center;
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
   z-index: 1000;
+  justify-content: center;
+  align-items: center;
 }
 
-#whatsappModal .modal-content {
-  background: white;
-  padding: 2rem;
-  border-radius: 8px;
+.popup-content {
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  width: 90%;
   max-width: 400px;
-  text-align: center;
-  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+  position: relative;
+  animation: fadeIn 0.3s ease-in-out;
 }
 
-#whatsappModal button {
-  margin-top: 1rem;
-  padding: 0.5rem 1rem;
-  border: none;
-  background-color: #25d366;
-  color: white;
-  font-weight: bold;
-  border-radius: 5px;
+.fecharPopup {
+  position: absolute;
+  top: 10px; right: 15px;
+  font-size: 24px;
   cursor: pointer;
 }
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
 
 /* Animação suave na entrada */
 @keyframes aparecer {

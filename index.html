@@ -36,31 +36,28 @@
 
    <!-- Seção Introdução -->
   <section class="intro">
+    <div id="popupConsulta" class="popup-overlay">
+  <div class="popup-content">
+    <span class="fecharPopup" onclick="fecharAgendamento()">&times;</span>
+    <h2>Agendar Consulta</h2>
+    <form action="agendar.php" method="POST">
+      <input type="text" name="nome" placeholder="Nome do Paciente" required>
+      <input type="date" name="data" required>
+      <input type="time" name="horario" required>
+      <select name="dentista" required>
+        <option value="">Selecione o Dentista</option>
+        <option value="Dr. Yuri">Dr. Yuri</option>
+        <option value="Dra. Viviane">Dra. Viviane</option>
+      </select>
+      <button type="submit">Finalizar Agendamento</button>
+    </form>
+  </div>
+</div>
     <div class="intro-container">
       <div class="intro-text">
         <h1>Bem-vindo à <span>Clínica</span> <b>Eminence</b></h1>
         <p>Realçamos o que há de mais belo em você: seu sorriso, sua saúde, sua essência.</p>
         <a href="#" class="btn" onclick="abrirAgendamento()">Agendar Consulta</a>
-      </div>
-
-      <div id="agendamentoModal" class="modal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:#00000099; z-index:1000; justify-content:center; align-items:center;">
-       <div class="modal-content" style="background:#fff; padding:20px; border-radius:8px; max-width:400px; width:90%;">
-        <h2>Agende sua consulta</h2>
-        <label for="data">Data:</label>
-        <input type="date" id="data" onchange="carregarHorariosDisponiveis()">
-
-        <label for="horario">Horário:</label>
-        <select id="horario"></select>
-
-        <label for="dentista">Dentista:</label>
-        <select id="dentista">
-        <option value="Yuri">Yuri</option>
-        <option value="Viviane">Viviane</option>
-        </select>
-
-        <button onclick="enviarParaWhatsApp()">Finalizar</button>
-        <button onclick="fecharAgendamento()" style="margin-top:10px;">Cancelar</button>
-       </div>
       </div>
 
       <div class="intro-images">
@@ -338,13 +335,5 @@
 
   <script src="./script.js"></script>
 
-  <div id="whatsappModal">
-  <div class="modal-content">
-    <h3>Quase lá! 😄</h3>
-    <p>Você será redirecionado para o WhatsApp.</p>
-    <p>Clique em <strong>"Iniciar conversa"</strong> para confirmar seu agendamento.</p>
-    <button onclick="confirmarWhatsApp()">Abrir WhatsApp</button>
-  </div>
-</div>
 </body>
 </html>

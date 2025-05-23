@@ -124,33 +124,21 @@ function carregarHorariosDisponiveis() {
   });
 }
 
-let linkWhatsApp = '';
-
-function enviarParaWhatsApp() {
-  const data = document.getElementById('data').value;
-  const horario = document.getElementById('horario').value;
-  const dentista = document.getElementById('dentista').value;
-
-  if (!data || !horario || !dentista) {
-    alert("Preencha todos os campos!");
-    return;
+function abrirAgendamento() {
+    document.getElementById("popupConsulta").style.display = "flex";
   }
 
-  const dataFormatada = new Date(data + 'T00:00:00').toLocaleDateString('pt-BR');
+  function fecharAgendamento() {
+    document.getElementById("popupConsulta").style.display = "none";
+  }
 
-  const mensagem = `Olá! Gostaria de agendar uma consulta:\n\n📅 *Data:* ${dataFormatada}\n🕒 *Horário:* ${horario}\n🦷 *Dentista:* ${dentista}`;
-  const mensagemCodificada = encodeURIComponent(mensagem);
-  const numero = '5583998220272';
-  linkWhatsApp = `https://wa.me/${numero}?text=${mensagemCodificada}`;
-
-  // Mostrar o modal
-  document.getElementById("whatsappModal").style.display = "flex";
-}
-
-function confirmarWhatsApp() {
-  window.open(linkWhatsApp, '_blank');
-  document.getElementById("whatsappModal").style.display = "none";
-}
+  // Fecha clicando fora do conteúdo
+  window.addEventListener("click", function(event) {
+    const popup = document.getElementById("popupConsulta");
+    if (event.target === popup) {
+      fecharAgendamento();
+    }
+  });
 
 
 
