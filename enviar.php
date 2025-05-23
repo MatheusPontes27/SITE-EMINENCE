@@ -11,7 +11,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Altere este e-mail para o e-mail que você deseja receber as mensagens
     $destinatario = "matheuspontes@cearabytes.com.br";
-    $assunto = "Nova mensagem do site";
+    $assunto = "Mensagem do Site Clínica Eminence";
     
     $corpoEmail = "Nome: $nome\n";
     $corpoEmail .= "Email: $email\n\n";
