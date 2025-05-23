@@ -134,23 +134,18 @@ function enviarParaWhatsApp() {
     return;
   }
 
-  // Formata a data para o formato brasileiro
   const dataFormatada = new Date(data + 'T00:00:00').toLocaleDateString('pt-BR');
-
-  // Cria a mensagem
   const mensagem = `Olá! Gostaria de agendar uma consulta:\n\n📅 *Data:* ${dataFormatada}\n🕒 *Horário:* ${horario}\n🦷 *Dentista:* ${dentista}`;
-
-  // Codifica a mensagem para a URL
   const mensagemCodificada = encodeURIComponent(mensagem);
-
-  // Link com número da clínica
   const numero = '5583998220272';
-  const link = `https://api.whatsapp.com/send?phone=${numero}&text=${mensagemCodificada}`;
+  const link = `https://wa.me/${numero}?text=${mensagemCodificada}`;
+  
   window.open(link, '_blank');
 
-  // Abre o WhatsApp em nova aba com a mensagem
-  window.open(link, '_blank');
+  // Enviar email para a clínica via PHP
+  enviarEmail(dataFormatada, horario, dentista);
 }
+
 
 
 
