@@ -124,6 +124,8 @@ function carregarHorariosDisponiveis() {
   });
 }
 
+let linkWhatsApp = '';
+
 function enviarParaWhatsApp() {
   const data = document.getElementById('data').value;
   const horario = document.getElementById('horario').value;
@@ -135,16 +137,21 @@ function enviarParaWhatsApp() {
   }
 
   const dataFormatada = new Date(data + 'T00:00:00').toLocaleDateString('pt-BR');
+
   const mensagem = `Olá! Gostaria de agendar uma consulta:\n\n📅 *Data:* ${dataFormatada}\n🕒 *Horário:* ${horario}\n🦷 *Dentista:* ${dentista}`;
   const mensagemCodificada = encodeURIComponent(mensagem);
   const numero = '5583998220272';
-  const link = `https://wa.me/${numero}?text=${mensagemCodificada}`;
-  
-  window.open(link, '_blank');
+  linkWhatsApp = `https://wa.me/${numero}?text=${mensagemCodificada}`;
 
-  // Enviar email para a clínica via PHP
-  enviarEmail(dataFormatada, horario, dentista);
+  // Mostrar o modal
+  document.getElementById("whatsappModal").style.display = "flex";
 }
+
+function confirmarWhatsApp() {
+  window.open(linkWhatsApp, '_blank');
+  document.getElementById("whatsappModal").style.display = "none";
+}
+
 
 
 
