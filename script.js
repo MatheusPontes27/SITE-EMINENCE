@@ -88,42 +88,6 @@ const slides = document.querySelectorAll('.intro-images .slide');
     menu.classList.toggle('show');
   });
 
-  function abrirAgendamento() {
-  document.getElementById("agendamentoModal").style.display = "flex";
-}
-
-function fecharAgendamento() {
-  document.getElementById("agendamentoModal").style.display = "none";
-}
-
-const horariosTotais = [
-  "08:00", "09:00", "10:00", "11:00", "12:00", "13:00", "14:00", "15:00", "16:00", "17:00", "18:00"
-];
-
-// Simula horarios ocupados (ideal: buscar do backend ou banco de dados)
-const horariosOcupados = {
-  "2025-05-20": ["09:00", "14:00"],
-  "2025-05-21": ["08:00", "12:00"]
-};
-
-function carregarHorariosDisponiveis() {
-  const data = document.getElementById("data").value;
-  const selectHorario = document.getElementById("horario");
-  selectHorario.innerHTML = "";
-
-  if (!data) return;
-
-  const ocupados = horariosOcupados[data] || [];
-
-  horariosTotais.forEach(horario => {
-    const option = document.createElement("option");
-    option.value = horario;
-    option.textContent = ocupados.includes(horario) ? `${horario} - Horário já reservado` : horario;
-    option.disabled = ocupados.includes(horario);
-    selectHorario.appendChild(option);
-  });
-}
-
 function abrirAgendamento() {
     document.getElementById("popupConsulta").style.display = "flex";
   }

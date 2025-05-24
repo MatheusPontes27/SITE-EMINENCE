@@ -855,7 +855,7 @@ button:hover svg {
   .menu-toggle span {
     height: 5px;
     width: 100%;
-    background: #333;
+    background: #E8D0A9;
     border-radius: 2px;
     transition: all 0.3s ease;
   }
@@ -872,7 +872,7 @@ button:hover svg {
   }
   
   /* Mobile */
-  @media (max-width: 768px) {
+  @media (max-width: 900px) {
     .menu {
       display: none;
       flex-direction: column;
