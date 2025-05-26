@@ -9,10 +9,10 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     // Define os e-mails dos dentistas
     switch ($dentista) {
         case "Dr. Yuri":
-            $to = "yuri@clinica.com";
+            $to = "yurilins@clinicaeminence.com.br";
             break;
         case "Dra. Viviane":
-            $to = "matheuspontes@cearabytes.com.br";
+            $to = "vivianecosta@clinicaeminence.com.br";
             break;
         default:
             $to = "geral@clinica.com"; // fallback
@@ -26,8 +26,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                "📅 Data: $data\n" .
                "⏰ Horário: $horario\n" .
                "🦷 Dentista: $dentista";
-    $headers = "From: sistema@clinica.com\r\n";
-    $headers .= "Reply-To: sistema@clinica.com\r\n";
+    $headers = "From: agendamento@clinica.com\r\n";
+    $headers .= "Reply-To: agendamento@clinica.com\r\n";
     $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
 
     // Envia o e-mail
